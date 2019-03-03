@@ -56,7 +56,7 @@ class GildedRoseTests: XCTestCase {
         let app = GildedRose(items: items)
         app.updateQuality()
         
-        verifyItem(item: items[0], name: passes, sellIn: 4, quality: 50)
+        verifyItem(item: items[0], name: passes, sellIn: 4, quality: 12)
     }
 
     
