@@ -11,51 +11,51 @@ public class GildedRose {
     
     public func updateQuality() {
         
-        for i in 0..<items.count {
-            if (items[i].name != agedBrie && items[i].name != passes) {
-                if (items[i].quality > 0) {
-                    if (items[i].name != sulfuras) {
-                        items[i].quality-=1
+        for item in items {
+            if (item.name != agedBrie && item.name != passes) {
+                if (item.quality > 0) {
+                    if (item.name != sulfuras) {
+                        item.quality-=1
                     }
                 }
             } else {
-                if (items[i].quality < 50) {
-                    items[i].quality+=1
+                if (item.quality < 50) {
+                    item.quality+=1
                     
-                    if (items[i].name == passes) {
-                        if (items[i].sellIn < 11) {
-                            if (items[i].quality < 50) {
-                                items[i].quality+=1
+                    if (item.name == passes) {
+                        if (item.sellIn < 11) {
+                            if (item.quality < 50) {
+                                item.quality+=1
                             }
                         }
                         
-                        if (items[i].sellIn < 6) {
-                            if (items[i].quality < 50) {
-                                items[i].quality+=1
+                        if (item.sellIn < 6) {
+                            if (item.quality < 50) {
+                                item.quality+=1
                             }
                         }
                     }
                 }
             }
             
-            if (items[i].name != sulfuras) {
-                items[i].sellIn-=1
+            if (item.name != sulfuras) {
+                item.sellIn-=1
             }
             
-            if (items[i].sellIn < 0) {
-                if (items[i].name != agedBrie) {
-                    if (items[i].name != passes) {
-                        if (items[i].quality > 0) {
-                            if (items[i].name != sulfuras) {
-                                items[i].quality-=1
+            if (item.sellIn < 0) {
+                if (item.name != agedBrie) {
+                    if (item.name != passes) {
+                        if (item.quality > 0) {
+                            if (item.name != sulfuras) {
+                                item.quality-=1
                             }
                         }
                     } else {
-                        items[i].quality = 0
+                        item.quality = 0
                     }
                 } else {
-                    if (items[i].quality < 50) {
-                        items[i].quality+=1
+                    if (item.quality < 50) {
+                        item.quality+=1
                     }
                 }
             }
