@@ -18,29 +18,12 @@ public class GildedRose {
                 let passes = BackstagePass()
                 passes.update(item)
             } else if item.name == sulfuras {
-                sulfurasUpdate(item)
+                let sulfuras = Sulfuras()
+                sulfuras.update(item)
             } else {
-                normalItemUpdate(item)
+                let normalItem = NormalItem()
+                normalItem.update(item)
             }
         }
     }
-    
-    
-
-    fileprivate func sulfurasUpdate(_ item: Item) {
-    }
-
-    fileprivate func normalItemUpdate(_ item: Item) {
-        if item.quality > 0 {
-            item.quality-=1
-        }
-        
-        item.sellIn-=1
-        
-        if item.sellIn < 0 && item.quality > 0 {
-            item.quality-=1
-        }
-    }
-
-
 }

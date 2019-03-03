@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A10C077A222C776F00BACC91 /* AgedBrie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10C0779222C776F00BACC91 /* AgedBrie.swift */; };
 		A10C077C222C77EE00BACC91 /* BackstagePass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10C077B222C77EE00BACC91 /* BackstagePass.swift */; };
+		A10C077E222C786000BACC91 /* Sulfuras.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10C077D222C786000BACC91 /* Sulfuras.swift */; };
+		A10C0780222C78C100BACC91 /* NormalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10C077F222C78C100BACC91 /* NormalItem.swift */; };
 		A1975FB0222C18B800B6FE79 /* GildedRose.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1975FA6222C18B700B6FE79 /* GildedRose.framework */; };
 		A1975FB5222C18B800B6FE79 /* GildedRoseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1975FB4222C18B800B6FE79 /* GildedRoseTests.swift */; };
 		A1975FB7222C18B800B6FE79 /* GildedRose.h in Headers */ = {isa = PBXBuildFile; fileRef = A1975FA9222C18B700B6FE79 /* GildedRose.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,6 +32,8 @@
 /* Begin PBXFileReference section */
 		A10C0779222C776F00BACC91 /* AgedBrie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgedBrie.swift; sourceTree = "<group>"; };
 		A10C077B222C77EE00BACC91 /* BackstagePass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackstagePass.swift; sourceTree = "<group>"; };
+		A10C077D222C786000BACC91 /* Sulfuras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sulfuras.swift; sourceTree = "<group>"; };
+		A10C077F222C78C100BACC91 /* NormalItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalItem.swift; sourceTree = "<group>"; };
 		A1975FA6222C18B700B6FE79 /* GildedRose.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GildedRose.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1975FA9222C18B700B6FE79 /* GildedRose.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GildedRose.h; sourceTree = "<group>"; };
 		A1975FAA222C18B700B6FE79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 				A1975FAA222C18B700B6FE79 /* Info.plist */,
 				A10C0779222C776F00BACC91 /* AgedBrie.swift */,
 				A10C077B222C77EE00BACC91 /* BackstagePass.swift */,
+				A10C077D222C786000BACC91 /* Sulfuras.swift */,
+				A10C077F222C78C100BACC91 /* NormalItem.swift */,
 			);
 			path = GildedRose;
 			sourceTree = "<group>";
@@ -210,9 +216,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10C077E222C786000BACC91 /* Sulfuras.swift in Sources */,
 				A10C077A222C776F00BACC91 /* AgedBrie.swift in Sources */,
 				A10C077C222C77EE00BACC91 /* BackstagePass.swift in Sources */,
 				A1FE699C222C19350014E432 /* Item.swift in Sources */,
+				A10C0780222C78C100BACC91 /* NormalItem.swift in Sources */,
 				A1FE699A222C192B0014E432 /* GildedRose.swift in Sources */,
 				A1FE699E222C193C0014E432 /* main.swift in Sources */,
 			);
