@@ -10,5 +10,4 @@ class AgedBrie : AnItem {
             item.quality+=1
         }
     }
-
 }
