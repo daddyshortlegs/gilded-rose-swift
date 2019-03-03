@@ -13,8 +13,8 @@ public class GildedRose {
         
         for item in items {
             if (item.name != agedBrie && item.name != passes) {
-                if (item.quality > 0) {
-                    if (item.name != sulfuras) {
+                if (item.name != sulfuras) {
+                    if (item.quality > 0) {
                         item.quality-=1
                     }
                 }
@@ -43,12 +43,12 @@ public class GildedRose {
             }
             
             if (item.sellIn < 0) {
+                
+                
                 if (item.name != agedBrie) {
-                    if (item.name != passes) {
+                    if (item.name != passes && item.name != sulfuras) {
                         if (item.quality > 0) {
-                            if (item.name != sulfuras) {
-                                item.quality-=1
-                            }
+                            item.quality-=1
                         }
                     } else {
                         item.quality = 0
@@ -58,7 +58,12 @@ public class GildedRose {
                         item.quality+=1
                     }
                 }
+                
+                
+                
             }
+            
+            
         }
     }
 }
