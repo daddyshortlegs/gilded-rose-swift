@@ -9,19 +9,11 @@ public class GildedRose {
         self.items = items
     }
     
+    
     public func updateQuality() {
-        
         for item in items {
             if item.name == agedBrie {
-                if item.quality < 50 {
-                    item.quality+=1
-                }
-                
-                item.sellIn-=1
-                
-                if item.sellIn < 0 && item.quality < 50 {
-                    item.quality+=1
-                }
+                agedBrieUpdate(item)
 
             } else if item.name == passes {
                 if (item.quality < 50) {
@@ -56,4 +48,17 @@ public class GildedRose {
             }
         }
     }
+    
+    fileprivate func agedBrieUpdate(_ item: Item) {
+        if item.quality < 50 {
+            item.quality+=1
+        }
+        
+        item.sellIn-=1
+        
+        if item.sellIn < 0 && item.quality < 50 {
+            item.quality+=1
+        }
+    }
+
 }
