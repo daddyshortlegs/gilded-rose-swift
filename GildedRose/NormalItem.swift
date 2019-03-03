@@ -1,4 +1,4 @@
-class NormalItem {
+class NormalItem : AnItem {
     func update(_ item: Item) {
         if item.quality > 0 {
             item.quality-=1

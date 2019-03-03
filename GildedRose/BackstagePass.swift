@@ -1,6 +1,4 @@
-import Foundation
-
-class BackstagePass {
+class BackstagePass : AnItem {
     func update(_ item: Item) {
         if (item.quality < 50) {
             item.quality+=1

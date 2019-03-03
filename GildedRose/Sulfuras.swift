@@ -1,6 +1,4 @@
-import Foundation
-
-class Sulfuras {
+class Sulfuras : AnItem {
     func update(_ item: Item) {
         
     }
