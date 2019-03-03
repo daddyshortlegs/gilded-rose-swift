@@ -1,13 +1,13 @@
 class BackstagePass : AnItem {
     func update(_ item: Item) {
-        if (item.quality < 50) {
+        if item.quality < 50 {
             item.quality+=1
             
-            if item.sellIn < 11 && item.quality < 50 {
+            if item.sellIn < 11 {
                 item.quality+=1
             }
             
-            if item.sellIn < 6 && item.quality < 50 {
+            if item.sellIn < 6 {
                 item.quality+=1
             }
         }
