@@ -51,6 +51,15 @@ class GildedRoseTests: XCTestCase {
         verifyItem(item: items[0], name: passes, sellIn: 9, quality: 50)
     }
 
+    func testPassesBelow6Days() {
+        let items = [Item(name: passes, sellIn: 5, quality: 9)]
+        let app = GildedRose(items: items)
+        app.updateQuality()
+        
+        verifyItem(item: items[0], name: passes, sellIn: 4, quality: 50)
+    }
+
+    
     func testPassesExpired() {
         let items = [Item(name: passes, sellIn: 0, quality: 50)]
         let app = GildedRose(items: items)
