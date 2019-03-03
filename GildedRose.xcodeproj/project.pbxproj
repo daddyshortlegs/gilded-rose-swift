@@ -10,6 +10,9 @@
 		A1975FB0222C18B800B6FE79 /* GildedRose.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1975FA6222C18B700B6FE79 /* GildedRose.framework */; };
 		A1975FB5222C18B800B6FE79 /* GildedRoseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1975FB4222C18B800B6FE79 /* GildedRoseTests.swift */; };
 		A1975FB7222C18B800B6FE79 /* GildedRose.h in Headers */ = {isa = PBXBuildFile; fileRef = A1975FA9222C18B700B6FE79 /* GildedRose.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A1FE699A222C192B0014E432 /* GildedRose.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FE6999222C192A0014E432 /* GildedRose.swift */; };
+		A1FE699C222C19350014E432 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FE699B222C19350014E432 /* Item.swift */; };
+		A1FE699E222C193C0014E432 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FE699D222C193C0014E432 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		A1975FAF222C18B700B6FE79 /* GildedRoseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GildedRoseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1975FB4222C18B800B6FE79 /* GildedRoseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GildedRoseTests.swift; sourceTree = "<group>"; };
 		A1975FB6222C18B800B6FE79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1FE6999222C192A0014E432 /* GildedRose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GildedRose.swift; sourceTree = "<group>"; };
+		A1FE699B222C19350014E432 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		A1FE699D222C193C0014E432 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,9 @@
 		A1975FA8222C18B700B6FE79 /* GildedRose */ = {
 			isa = PBXGroup;
 			children = (
+				A1FE699D222C193C0014E432 /* main.swift */,
+				A1FE699B222C19350014E432 /* Item.swift */,
+				A1FE6999222C192A0014E432 /* GildedRose.swift */,
 				A1975FA9222C18B700B6FE79 /* GildedRose.h */,
 				A1975FAA222C18B700B6FE79 /* Info.plist */,
 			);
@@ -148,6 +157,7 @@
 				TargetAttributes = {
 					A1975FA5222C18B700B6FE79 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					A1975FAE222C18B700B6FE79 = {
 						CreatedOnToolsVersion = 10.1;
@@ -194,6 +204,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1FE699C222C19350014E432 /* Item.swift in Sources */,
+				A1FE699A222C192B0014E432 /* GildedRose.swift in Sources */,
+				A1FE699E222C193C0014E432 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +353,7 @@
 		A1975FBB222C18B800B6FE79 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -358,6 +372,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.andy.GildedRose;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -365,6 +380,7 @@
 		A1975FBC222C18B800B6FE79 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -390,6 +406,7 @@
 		A1975FBE222C18B800B6FE79 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = GildedRoseTests/Info.plist;
@@ -407,6 +424,7 @@
 		A1975FBF222C18B800B6FE79 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = GildedRoseTests/Info.plist;

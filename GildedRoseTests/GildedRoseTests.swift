@@ -1,34 +1,20 @@
-//
-//  GildedRoseTests.swift
-//  GildedRoseTests
-//
-//  Created by Andy Smith on 03/03/2019.
-//  Copyright © 2019 Andy Smith. All rights reserved.
-//
-
 import XCTest
 @testable import GildedRose
 
 class GildedRoseTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    func testAgedBrie() {
+        let items = [Item(name: "Aged Brie", sellIn: 0, quality: 0)]
+        let app = GildedRose(items: items)
+        app.updateQuality()
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        verifyItem(item: items[0], name: "Aged Brie", sellIn: -1, quality: 2)
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func verifyItem(item: Item, name: String, sellIn: Int, quality: Int) {
+        XCTAssertEqual(name, item.name)
+        XCTAssertEqual(sellIn, item.sellIn)
+        XCTAssertEqual(quality, item.quality)
     }
 
 }
