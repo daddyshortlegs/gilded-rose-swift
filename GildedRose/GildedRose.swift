@@ -23,6 +23,8 @@ public class GildedRose {
                     item.quality+=1
                     
                     if (item.name == passes) {
+                        
+                        
                         if (item.sellIn < 11 && item.quality < 50) {
                             item.quality+=1
                         }
@@ -30,18 +32,23 @@ public class GildedRose {
                         if (item.sellIn < 6 && item.quality < 50) {
                             item.quality+=1
                         }
+                        
+                        
+                        
                     }
                 }
+                
+                
             }
             
             if (item.name != sulfuras) {
                 item.sellIn-=1
             }
             
-            if (item.sellIn < 0) {
+            
                 
-                
-                if (item.name != agedBrie) {
+            if (item.name != agedBrie) {
+                if (item.sellIn < 0) {
                     if (item.name != passes && item.name != sulfuras) {
                         if (item.quality > 0) {
                             item.quality-=1
@@ -49,16 +56,16 @@ public class GildedRose {
                     } else {
                         item.quality = 0
                     }
-                } else {
+                }
+            } else {
+                if (item.sellIn < 0) {
                     if (item.quality < 50) {
                         item.quality+=1
                     }
                 }
-                
-                
-                
             }
-            
+                
+                
             
         }
     }
