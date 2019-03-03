@@ -1,9 +1,6 @@
 
 public class GildedRose {
     var items:[Item]
-    let agedBrie = "Aged Brie"
-    let passes = "Backstage passes to a TAFKAL80ETC concert"
-    let sulfuras = "Sulfuras, Hand of Ragnaros"
     
     required public init(items:[Item]) {
         self.items = items
@@ -11,19 +8,22 @@ public class GildedRose {
     
     public func updateQuality() {
         for item in items {
-            if item.name == agedBrie {
-                let agedBrie = AgedBrie()
-                agedBrie.update(item)
-            } else if item.name == passes {
-                let passes = BackstagePass()
-                passes.update(item)
-            } else if item.name == sulfuras {
-                let sulfuras = Sulfuras()
-                sulfuras.update(item)
-            } else {
-                let normalItem = NormalItem()
-                normalItem.update(item)
-            }
+            let anItem = lookupItem(item.name)
+            anItem?.update(item)
         }
+    }
+    
+    fileprivate func lookupItem(_ name: String) -> AnItem? {
+        let agedBrie = "Aged Brie"
+        let passes = "Backstage passes to a TAFKAL80ETC concert"
+        let sulfuras = "Sulfuras, Hand of Ragnaros"
+
+        let lookup = [agedBrie: AgedBrie(), passes: BackstagePass(), sulfuras: Sulfuras()] as [String : AnItem]
+        let anItem = lookup[name]
+
+        if (anItem != nil) {
+            return anItem
+        }
+        return NormalItem()
     }
 }
